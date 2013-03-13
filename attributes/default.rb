@@ -11,3 +11,5 @@ default["backupninja"]["reportsuccess"] = false
 default["backupninja"]["reportwarning"] = true
 default["backupninja"]["reportspace"] = true
 default["backupninja"]["schedule"] = "everyday at 01:00"
+
+

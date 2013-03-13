@@ -14,3 +14,6 @@ attribute :nicelevel, :kind_of => [Integer], :default => 0
 
 attribute :remote, :kind_of => String, :default => nil
 attribute :directory, :kind_of => String
+
+# Automatically find a backup host.
+attribute :auto, :kind_of => [TrueClass, FalseClass], :default => false

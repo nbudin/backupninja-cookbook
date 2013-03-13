@@ -43,7 +43,15 @@ host = <%= @desthost %>
 <% end %>
 
 ## make the files owned by this user
-# user =
+<% if @destmode == "remote" %>
+user = <%= @destuser %>
+<% else %>
+# host =
+<% end %>
 
 ## passed directly to ssh
-# sshoptions = 
+<% if @destmode == "remote" %>
+sshoptions = -oIdentityFile=<%= @userhome %>/.ssh/id_rsa.backup
+<% else %>
+# sshoptions =
+<% end %>
