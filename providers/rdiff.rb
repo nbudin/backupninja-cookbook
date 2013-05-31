@@ -7,6 +7,8 @@
 
 action :backup do
   
+  include_recipe "backupninja::rdiff"
+
   if new_resource.auto
     backupnode = search(:node, 'run_list:recipe\[backupninja\:\:server\]')    
     desthost = backupnode[0]['fqdn']
